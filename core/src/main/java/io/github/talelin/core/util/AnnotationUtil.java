@@ -19,7 +19,9 @@ public class AnnotationUtil {
      */
     public static UserLevel findRequired(Annotation[] annotations) {
         for (Annotation annotation : annotations) {
+        	// 注解类型
             Class<? extends Annotation> aClass = annotation.annotationType();
+            // 获取注释
             Required required = aClass.getAnnotation(Required.class);
             if (required != null) {
                 return required.level();

@@ -13,13 +13,17 @@ import java.lang.annotation.*;
 @Documented
 public @interface PermissionMeta {
 
-    String value();
+	/** 权限名称 */
+	String value();
 
-    @Deprecated
-    String permission() default "";
+	@Deprecated
+	/** 权限名称(已弃用) */
+	String permission() default "";
 
-    String module() default "";
+	/** 所属模块 */
+	String module() default "";
 
-    boolean mount() default true;
+	/** 是否有效 */
+	boolean mount() default true;
 
 }
